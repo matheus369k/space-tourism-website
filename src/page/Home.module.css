@@ -1,0 +1,134 @@
+.home_container {
+    display: grid;
+    width: 80%;
+    height: 50%;
+    grid-template-columns: 50% 30%;
+    grid-template-rows: 15% 45% 40%;
+    padding-top: 20%;
+    margin-left: 10%;
+    grid-auto-rows: auto;
+    color: white;
+}
+
+/* 
+* { border: 2px solid red;}
+*/
+
+.home_container h2 {
+    letter-spacing: 2.7px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-auto-rows: 200px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    color: #6b6e7d;
+}
+
+.home_container h1 {
+    font-weight: 500;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    font-size: 150px;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif
+}
+
+.home_container p {
+    font-family: 'Barlow Condensed', sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 440px;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    text-align: justify;
+    color: #6b6e7d;
+}
+
+.home_container button {
+    color: #0b0d17;
+    font-family: 'Cousine', monospace;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.612);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.home_container button:hover {
+    transform: scale(1.1);
+    transition: .5s;
+    box-shadow: 0 0 0 40px rgba(255, 255, 255, 0.056);
+}
+
+@media (max-width: 1024px) and (min-height: 900px) {
+    .home_container {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .home_container h2 {
+        margin-top: 10px;
+    }
+    
+    .home_container h1 {
+        margin: 20px 0 ;
+    }
+
+    .home_container p {
+        text-align: center;
+    }
+
+    .home_container button {
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 768px){
+    .home_container {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .home_container h2 {
+        margin-top: 50px;
+    }
+
+    .home_container h1 {
+        margin: 10px 0 ;
+        font-size: 100px;
+    }
+
+    .home_container p {
+        text-align: center;
+    }
+
+    .home_container button {
+        margin-top: 100px;
+    }
+}

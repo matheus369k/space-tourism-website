@@ -1,0 +1,87 @@
+.container {
+    gap: 20px;
+}
+
+.container .img {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.container .icon {
+    width: 35px;
+    height: 30px;
+    position: fixed;
+    z-index: 1;
+    top: 50px;
+    right: 50px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.container .menu {
+    background: rgba(60, 60, 60, 0.108);
+    width: 75%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    backdrop-filter: blur(30px);
+}
+
+.container .img:hover {
+    transition: .5s;
+    transform: scale(1.1);
+}
+
+.container.home,
+.container.crew,
+.container.technology,
+.container.destination {
+    height: 100vh;
+    background: top center no-repeat fixed;
+    background-size: cover;
+}
+
+.container.container.home {
+    background-image: url(../img/home/background-home-desktop.jpg);
+}
+.container.destination {
+    background-image: url(../img/destination/background-destination-desktop.jpg);
+}
+.container.crew {
+    background-image: url(../img/crew/background-crew-desktop.jpg);
+}
+.container.technology {
+    background-image: url(../img/technology/background-technology-desktop.jpg);
+}
+
+@media (min-width: 768px ) {
+    .container .icon {
+        display: none;
+    }
+    
+    .container nav {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .container .icon {
+        right: 20px;
+        top: 20px;
+    }
+
+    .container .img {
+        width: 30px;
+        height: 30px;
+        left: 20px;
+        top: 20px;
+    }
+}
+
+
+

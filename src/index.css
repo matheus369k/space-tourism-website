@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700;900&family=Bellefair&display=swap');
+
+
+/*
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif;
+*/
+
+:root {
+  --color-c0: #6b6e7d;
+  --color-c1: #d0d6f9;
+  --color-c2: #0b0d17;
+  --color-c3: #ffffff;
+}
+
+html,
+body {
+  height: 100vh;
+}
