@@ -40,13 +40,13 @@ const Destination=()=>{
                     </nav>
                     <h1>{index.name}</h1>
                     <p>{index.description}</p>
-                    <div className={style.infor}>
-                        <span>{index.distance}</span>
-                        <span>{index.travel}</span>
-                    </div>
                     <div className={style.dado}>
                         <h3>Avg. distance</h3>
                         <h3>Est. travel time</h3>
+                    </div>
+                    <div className={style.infor}>
+                        <span>{index.distance}</span>
+                        <span>{index.travel}</span>
                     </div>
                 </ul>
             </Container>

@@ -39,8 +39,8 @@ const Crew=()=>{
                         <li onClick={() => setIndex(datas[2])}></li>
                         <li onClick={() => setIndex(datas[3])}></li>
                     </nav>
-                    <h1>{index.name}</h1>
                     <h3>{index.role}</h3>
+                    <h1>{index.name}</h1>
                     <p>{index.bio}</p>
                 </ul>
             </Container>

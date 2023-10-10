@@ -8,6 +8,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700;900&family=Bellefair&display=swap');
 
+html,
+body{
+  height: 100vh;
+  width: auto;
+  background-color: black;
+}
+
+@media (min-height: 888px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+}
+
+@media (max-height: 888px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
 
 /*
 font-family: 'Barlow Condensed', sans-serif;
@@ -19,9 +39,4 @@ font-family: 'Bellefair', serif;
   --color-c1: #d0d6f9;
   --color-c2: #0b0d17;
   --color-c3: #ffffff;
-}
-
-html,
-body {
-  height: 100vh;
 }

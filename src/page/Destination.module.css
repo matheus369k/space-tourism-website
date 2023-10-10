@@ -93,6 +93,8 @@
     font-weight: 400;
     text-align: justify;
     color: #6b6e7d;
+    padding-bottom: 20px;
+    border-bottom: 5px solid #0b0d17;
 }
 
 .destination_container .dado {
@@ -128,4 +130,122 @@
     color: white;
     text-transform: uppercase;
     text-align: center;
+}
+
+@media (max-width: 1024px) and (min-height: 900px) {
+    .destination_container {
+        position: relative;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .destination_container img {
+        padding: 0;
+        margin: 50px 0;
+    }
+
+    .destination_container nav {
+        width: min-content;
+    }
+
+    .destination_container h1 {
+        margin: 10px 0;
+    }
+    .destination_container p {
+        padding: 30px 0 50px;
+        width: 80%;
+    }
+
+    .destination_container .dado {
+        gap: 80px;
+    }
+
+    .destination_container .infor {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .destination_container {
+        position: relative;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .destination_container img {
+        width: 300px;
+        height: 300px;
+        margin: 20px 0;
+        padding-left: 0;
+    }
+
+    .destination_container h1 {
+        font-size: 6em;
+    }
+
+    .destination_container nav {
+        gap: 20px;
+        padding-right: 0;
+        margin-right: 0;
+        width: min-content;
+    }
+
+    .destination_container p {
+        width: 90%;
+        text-align: center;
+    }
+
+    .destination_container .dado {
+        gap: 100px;
+    }
+    
+    .destination_container .infor {
+        gap: 60px;
+    }
+
+}
+
+@media (max-width: 468px) {
+    .destination_container {
+        padding-top: 80px;
+    }
+
+    .destination_container img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .destination_container nav {
+        gap: 20px;
+    }
+
+    .destination_container h1 {
+        font-size: 5em;
+    }
+
+    .destination_container .dado {
+        margin-top: 20px;
+        display: grid;
+        gap: 50px;
+    }
+    
+    .destination_container .infor {
+        gap: 40px;
+        display:  flex;
+        flex-direction: column;
+        margin-top: -70px;
+    }
 }
