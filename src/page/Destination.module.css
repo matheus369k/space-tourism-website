@@ -5,8 +5,8 @@
     position: absolute;
     bottom: 0;
     left: 150px;
-    grid-template-columns: 60% 20% 20%;
-    grid-template-rows: 10% 15% 25% 25% 10% 15%;
+    grid-template-columns: 60% 25% 20%;
+    grid-template-rows: 10% 15% 25% 15% 10% 10%;
 }
 
 .destination_container h2 {
@@ -29,7 +29,7 @@
 }
 
 .destination_container img {
-    padding-left: 80px;
+    margin-left: 80px;
     width: 380px;
     height: 380px;
     grid-row-start: 3;
@@ -132,6 +132,38 @@
     text-align: center;
 }
 
+@media (min-width: 768px) and (max-width: 850px) and (max-height: 1124px) {
+    .destination_container {
+        top: 5%;
+    }
+} 
+
+@media (min-width: 900px) and (max-width: 1124px) and (max-height: 824px)  {
+    .destination_container img  {
+        padding-left: 0;
+    }
+    
+    .destination_container .dado {
+        gap: 35%;
+    }
+    
+    .destination_container .infor {
+        gap: 20%;
+    }
+}
+
+@media (max-width: 1068px) and (max-height: 900px) {
+    .destination_container {  
+        left: 50px;
+        grid-template-columns: 60% 30% 24%;
+    }
+
+    .destination_container img {
+        margin-left: 0;
+        margin-right: 50px;
+    }
+}
+
 @media (max-width: 1024px) and (min-height: 900px) {
     .destination_container {
         position: relative;
@@ -171,7 +203,6 @@
         gap: 50px;
     }
 }
-
 @media (max-width: 768px) {
     .destination_container {
         position: relative;
@@ -221,6 +252,10 @@
 @media (max-width: 468px) {
     .destination_container {
         padding-top: 80px;
+    }
+
+    .destination_container h2 {
+        font-size: 18px;
     }
 
     .destination_container img {

@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
   list-style: none;
   text-decoration: none;
 }
@@ -11,21 +11,15 @@
 html,
 body{
   height: 100vh;
-  width: auto;
+  width: 100vw;
+  overflow-x: hidden;
   background-color: black;
 }
 
-@media (min-height: 888px) {
+@media (min-height: 858px) {
   html,
   body {
     overflow: hidden;
-  }
-}
-
-@media (max-height: 888px) {
-  html,
-  body {
-    overflow-x: hidden;
   }
 }
 

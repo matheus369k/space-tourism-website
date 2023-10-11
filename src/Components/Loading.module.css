@@ -3,7 +3,7 @@
     height: 100vh;
     position: fixed;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.837);
+    background-color: rgba(0, 0, 0, 0.935);
 }
 
 .loading_container svg {

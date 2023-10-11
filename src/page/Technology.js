@@ -19,7 +19,7 @@ const Technology=()=>{
     }, [])
 
     if (index.images !== undefined){
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > window.innerHeight) {
             var img = index.images.portrait
         } else {
             var img = index.images.landscape}
@@ -31,13 +31,13 @@ const Technology=()=>{
             <Container classCustom="technology">
                 <ul className={style.technology_container}>
                     <h2><span>03</span>  Space launch 101</h2>
-                    <span>The terminology...</span>
                     <img src={`${img}`} alt="imagem" />
                     <nav>
                         <li onClick={() => setIndex(datas[0])}>1</li>
                         <li onClick={() => setIndex(datas[1])}>2</li>
                         <li onClick={() => setIndex(datas[2])}>3</li>
                     </nav>
+                    <span>The terminology...</span>
                     <h1>{index.name}</h1>
                     <p>{index.description}</p>
                 </ul>
