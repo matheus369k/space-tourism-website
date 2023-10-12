@@ -1,5 +1,7 @@
 .container {
     gap: 20px;
+    height: 100%;
+    width: 100vw;
 }
 
 .container .img {
@@ -37,21 +39,18 @@
     transform: scale(1.1);
 }
 
-.container .home,
-.container .crew,
-.container .technology,
-.container .destination {
-    width: 100%;
-    padding-bottom: 20px;
+.container.home,
+.container.crew,
+.container.technology,
+.container.destination {
     height: 100vh;
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    width: 100%;
+    background: center center no-repeat fixed;
     background-size: cover;
 }
 
 @media (min-width: 1024px ) {
-    .container.container.home {
+    .container.home {
         background-image: url(../img/home/background-home-desktop.jpg);
     }
     .container.destination {
@@ -65,8 +64,8 @@
     }
 }
 
-@media (min-width: 768px ) and (max-width: 1024px ) {
-    .container.container.home {
+@media (min-width: 768px ) and (max-width: 1023px ) {
+    .container.home {
         background-image: url(../img/home/background-home-tablet.jpg);
     }
     .container.destination {
@@ -81,7 +80,7 @@
 }
 
 @media (max-width: 768px ) {
-    .container.container.home {
+    .container.home {
         background-image: url(../img/home/background-home-mobile.jpg);
     }
     .container.destination {
@@ -95,47 +94,34 @@
     }
 }
 
-@media (min-height: 858px ){
-    .container .home,
-    .container .crew,
-    .container .technology,
-    .container .destination {
-        overflow: hidden;
-    }
-}
-
-@media (max-height: 858px ) and (max-width: 568px) {
-    .container .home,
-    .container .crew,
-    .container .technology,
-    .container .destination {
-        height: 100%;
-    }
-}
-
-@media (min-width: 768px ) {
+@media (min-width: 667px ) {
     .container .icon {
         display: none;
     }
-    
-    .container nav {
-        display: none;
-    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 668px)  {
     .container .icon {
         right: 20px;
         top: 20px;
     }
 
     .container .img {
-        width: 30px;
-        height: 30px;
         left: 20px;
         top: 20px;
     }
+}
 
+@media (max-height: 424px)  {
+    .container .icon {
+        width: 25px;
+        height: 20px;
+    }
+
+    .container .img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 

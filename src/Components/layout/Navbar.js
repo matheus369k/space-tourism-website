@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom"
 
 import style from "./Navbar.module.css"
-import Container from "../Container"
 
-const  Navbar=()=>{
+const Navbar=(props)=>{
+    console.log(props.classCustom);
 
     return ( 
         <>
-        <Container>
-            <ul className={style.Navbar_container}>
+            <ul className={`${style[props.classCustom]} ${style.Navbar_container}`}>
                 <li>
                     <Link to="/"><span>00</span>Home</Link>
                 </li>
@@ -22,7 +21,6 @@ const  Navbar=()=>{
                     <Link to="/technology"><span>03</span>Technology</Link>
                 </li>
             </ul>
-        </Container>
         </>
     )
 }

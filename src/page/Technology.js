@@ -37,7 +37,7 @@ const Technology=()=>{
                         <li onClick={() => setIndex(datas[1])}>2</li>
                         <li onClick={() => setIndex(datas[2])}>3</li>
                     </nav>
-                    <span>The terminology...</span>
+                    <h3>The terminology...</h3>
                     <h1>{index.name}</h1>
                     <p>{index.description}</p>
                 </ul>
