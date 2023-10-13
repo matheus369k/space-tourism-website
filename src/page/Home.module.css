@@ -1,3 +1,7 @@
+/*
+CSS from desktop
+*/
+
 .home_container {
     display: grid;
     width: 80%;
@@ -45,7 +49,7 @@
 }
 
 .home_container button {
-    color: #0b0d17;
+    color: #000000;
     font-family: 'Cousine', monospace;
     grid-column-start: 3;
     grid-row-start: 2;
@@ -77,22 +81,27 @@
     }
 }
 
+/*
+CSS from tablet
+*/
+
 @media (max-width: 1024px) and (min-height: 900px) {
     .home_container {
-        height: 100vh;
+        height: 85vh;
         width: 90%;
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        top: 20%;
+        bottom: 0%;
+        top: auto;
         transform: translate(0, 0);
         left: 5%;
         right: 5%;
         margin: 0;
         gap: 5%;
     }
-
+    
     .home_container h2 {
         font-size: 28px;
     }
@@ -115,7 +124,20 @@
     }
 }
 
-@media (max-width: 768px){
+@media (min-height: 924px) and (max-width: 668px){
+    .home_container button {
+        margin-top: 40px;
+        font-size: 1.5em;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/*
+CSS from Mobile
+*/
+
+@media (max-width: 768px) and ( max-height: 924px){
     .home_container {
         height: 100vh;
         width: 90%;
@@ -192,7 +214,7 @@
         font-size: 1.6em;
     }
 }
-@media (max-height: 876px) and (max-width: 768px) {
+@media (max-height: 924px) and (max-width: 768px) {
     .home_container h2 {
         margin-top: 30%;
     }
@@ -229,5 +251,31 @@
         width: 150px;
         height: 150px;
         font-size: 1.2em;
+    }
+}
+
+@media (max-width: 300px) {
+    .home_container {
+        height: 100%;
+    }
+    .home_container h2 {
+        margin-top: 30%;
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .home_container h1 {
+        font-size: 60px;
+    }
+
+    .home_container p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .home_container button {
+        height: 100px;
+        width: 100px;
+        font-size: 1em;
     }
 }

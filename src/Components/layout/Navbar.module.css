@@ -1,15 +1,24 @@
 .Navbar_container {
-    position: fixed;
+    position: absolute;
     top: 40px;
     right: 0px;
     display: flex;
     flex-direction: row;
     gap: 60px;
     font-family: 'Barlow Condensed', sans-serif;
-    padding: 20px 40px 0px 100px;
-    background: linear-gradient(-90deg, rgba(255, 255, 255, 0.108) 70%, rgba(0, 0, 0, 0.153) 100%);
+    padding: 20px 40px 0px 150px;
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0.174) 70%, rgba(37, 37, 37, 0.081) 90%, rgba(23, 23, 23, 0.023) 100%);
     backdrop-filter: blur(5px);
     border-radius: 5px 0 0 5px ;
+    z-index: 1;
+}
+
+.barra{
+    position: absolute;
+    left: 120px;
+    top: 68px;
+    border: 4px solid rgba(22, 22, 22, 0.165);
+    width: 60vw;
 }
 
 .Navbar_container li {
@@ -25,7 +34,7 @@
 
 .Navbar_container a {
     cursor: pointer;
-    padding-bottom: 30px;
+    padding:2px 0 30px;
     color:#d0d6f9;
     font-weight: 500;
     letter-spacing: 2.7px;
@@ -46,12 +55,15 @@
     .Navbar_container span {
         display: none;
     }
+
+    .barra {
+        display: none;
+    }
 }
 
 @media (max-width: 668px) {
     .Navbar_container {
         display: none;
-
     }
 
     .Navbar_container.menu_Open{

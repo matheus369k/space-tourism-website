@@ -7,6 +7,7 @@ const Navbar=(props)=>{
 
     return ( 
         <>
+            <div className={style.barra}></div>
             <ul className={`${style[props.classCustom]} ${style.Navbar_container}`}>
                 <li>
                     <Link to="/"><span>00</span>Home</Link>

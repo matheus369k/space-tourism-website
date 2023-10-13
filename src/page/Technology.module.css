@@ -78,7 +78,8 @@ CSS from desktop
 .technology_container h3 {
     letter-spacing: 2.7px;
     grid-row-start: 2;
-    text-transform: uppercase;
+    font-weight: 400;
+    text-transform: capitalize;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
     color: #6b6e7d;
@@ -222,6 +223,7 @@ CSS to screens from tablet
     }
 
     .technology_container h3{
+        font-size: 16px;
         text-align: center;
     }
 
@@ -245,15 +247,15 @@ CSS to screens from tablet
 }
 
 /*
-CSS of the screens from Mobile
+CSS from Mobile
 */
 
 @media (max-width: 768px) and (max-height: 924px) {
     .technology_container {
-        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
         width: 100vw;
         bottom: auto;
         left:0;
@@ -280,12 +282,11 @@ CSS of the screens from Mobile
         display: flex;
         flex-direction: row;
         padding: 10px 0;
-        margin: 20px;
     }
 
     .technology_container nav li {
-        width: 50px; 
-        height: 50px;
+        width: 40px; 
+        height: 40px;
     }
 
     .technology_container h3 {
@@ -300,9 +301,9 @@ CSS of the screens from Mobile
 
 @media (max-width: 568px) {
     .technology_container {
+        position: relative;
         display: flex;
         flex-direction: column;
-        height: 100vh;
     }
 
     .technology_container h2 {
@@ -316,32 +317,29 @@ CSS of the screens from Mobile
     .technology_container img {
         position: relative;
         top: auto;
-        padding: 20px 0px;
+        padding: 20px 0 10px;
         bottom: auto;
         right: auto;
     }
 
     .technology_container nav {
-        padding: 10px 0 30px;
-        margin: 0 20px;
+        padding: 10px 0 20px;
     }
 
     .technology_container h1 {
         font-size: 24px;
-        padding: 10px 0 30px;
+        padding: 10px 0 20px;
     }
 
     .technology_container p {
         text-align: center;
         max-width: none;
-        width: 80%;
+        width: 90%;
     }
 }
 
-@media (min-height: 725px)  and (max-width: 768px) {
+@media (min-height: 624px)  and (max-width: 1024px) {
     .technology_container {
-        overflow: hidden;
-        margin: 0;
         height: 100vh;
     }
 
@@ -350,10 +348,9 @@ CSS of the screens from Mobile
     }
 }
 
-@media (max-height: 724px){
+@media (max-height: 624px) and (max-width:768px){
     .technology_container {
-        overflow-x: hidden;
-        height: 100vh;
+        height: 100%;
     }
 
     .technology_container h2 {
@@ -363,14 +360,9 @@ CSS of the screens from Mobile
 
 
 @media (max-height: 424px) {
-    *{
-        letter-spacing: normal;
-        line-height: normal;
-    }
-
     .technology_container h2 {
         font-size: 8px;
-        padding-top: 35%;
+        padding-top: 25%;
     }
 
     .technology_container h2 span{
@@ -398,6 +390,8 @@ CSS of the screens from Mobile
     }
 
     .technology_container p {
+        letter-spacing: normal;
+        line-height: normal;
         width: 98%;
         font-size: 13px;
     }
