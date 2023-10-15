@@ -5,8 +5,8 @@ CSS from desktop
 .technology_container {
     display: grid;
     grid-template-columns: 10% 55% 50%;
-    grid-template-rows: 30% 5% 13% 30%;
-    height: 80%;
+    grid-template-rows: 30% 5% 20% 40%;
+    height: 70%;
     width: 100%;
     position: fixed;
     left: 120px;
@@ -105,16 +105,19 @@ CSS from desktop
     height: 60px;
     border-radius: 50%;
     color: #fff;
-    border: 1px solid #d0d6f9;
+    border: 2px solid #91919188;
     cursor: pointer;
 }
 
-.technology_container nav li:hover {
+.technology_container .selected {
     background-color: #fff;
     color: #0b0d17;
-    transform: scale(1.1);
+}
+
+.technology_container nav li:hover {
+    border: 2px solid rgba(220, 220, 220, 0.8);
+    transform: scale(103%);
     transition: .5;
-    font-size: 25px;
 }
 
 @media (min-width: 993px) and (max-width: 1324px) and (min-height: 768px)  {

@@ -25,27 +25,36 @@ const Destination=()=>{
             var img = index.images.png}
     }
 
+    document.querySelectorAll(".link").forEach((select) => {
+        select.addEventListener("click", ()=> {
+
+            const current = document.querySelector(".link.Destination_selected__T5jOp")
+            current.classList.remove(style.selected)
+            select.classList.add(style.selected)
+        })
+    })
+
     return (
         <>
             <Loading />
             <Container classCustom="destination">
                 <ul className={style.destination_container}>
-                    <h2><span>01</span> Pick your destination</h2>
+                    <h2><span>01</span>Pick your destination</h2>
                     <img src={`${img}`} alt="imagem" />
                     <nav>
-                        <li onClick={() => setIndex(datas[0])}>Moon</li>
-                        <li onClick={() => setIndex(datas[1])}>Mars</li>
-                        <li onClick={() => setIndex(datas[2])}>Europa</li>
-                        <li onClick={() => setIndex(datas[3])}>Titan</li>
+                        <li className="link Destination_selected__T5jOp" onClick={() => setIndex(datas[0])}>Moon</li>
+                        <li className="link" onClick={() => setIndex(datas[1])}>Mars</li>
+                        <li className="link" onClick={() => setIndex(datas[2])}>Europa</li>
+                        <li className="link" onClick={() => setIndex(datas[3])}>Titan</li>
                     </nav>
                     <h1>{index.name}</h1>
                     <p>{index.description}</p>
                     <div className={style.dado}>
                         <h3>Avg. distance</h3>
-                        <h3>Est. travel time</h3>
+                        <span>{index.distance}</span>
                     </div>
                     <div className={style.infor}>
-                        <span>{index.distance}</span>
+                        <h3>Est. travel time</h3>
                         <span>{index.travel}</span>
                     </div>
                 </ul>

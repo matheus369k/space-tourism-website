@@ -4,13 +4,13 @@ CSS from desktop
 
 .destination_container {
     display: grid;
-    width: 80%;
+    width: 85%;
     height: 80%;
     position: absolute;
     bottom: 0vh;
     left: 150px;
-    grid-template-columns: 60% 25% 20%;
-    grid-template-rows: 10% 15% 20% 15% 10% 10%;
+    grid-template-columns: 60% 20% 20%;
+    grid-template-rows: 10% 17% 25% 25% 12%;
 }
 
 .destination_container h2 {
@@ -75,8 +75,14 @@ CSS from desktop
 }
 
 .destination_container nav li:hover {
-    border-bottom: 2px solid #fff;
-    color: #fff;
+    border-bottom: 2px solid #d5d4d4;
+    color: #d6d6d6c6;
+    padding-bottom: 8px;
+}
+
+.destination_container .selected{
+    border-bottom: 2px solid #ffffffd5;
+    color: #ffffffc6;
     padding-bottom: 8px;
 }
 
@@ -103,11 +109,12 @@ CSS from desktop
 
 .destination_container .dado {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: left;
     grid-row-start: 5;
-    gap: 45%;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    text-align: left;
 }
 
 .destination_container h3 {
@@ -121,10 +128,10 @@ CSS from desktop
 
 .destination_container .infor {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    grid-row-start: 6;
-    gap: 30%;
+    flex-direction: column;
+    text-align: right;
+    grid-row-start: 5;
+    grid-column-start: 3;
 }
 
 .destination_container div span {
@@ -133,7 +140,6 @@ CSS from desktop
     font-weight: 800;
     color: white;
     text-transform: uppercase;
-    text-align: center;
 }
 
 @media (min-width: 900px) and (max-width: 1124px) and (max-height: 824px)  {

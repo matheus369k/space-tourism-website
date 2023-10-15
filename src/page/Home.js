@@ -5,6 +5,14 @@ import style from "./Home.module.css"
 
 const Home=()=>{
 
+    const Explore=()=>{
+        const url = window.location.href
+        window.open(`${url}destination`, '_self')
+
+        document.querySelector(".link.Navbar_selected__qyaqe").classList.remove("Navbar_selected__qyaqe")
+        document.querySelector("#destination").classList.add("Navbar_selected__qyaqe")
+    }
+
     return (
         <>
             <Loading />
@@ -15,7 +23,7 @@ const Home=()=>{
                     <p>
                         Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
                     </p>
-                    <button>Explore</button>
+                    <button onClick={()=>Explore()}>Explore</button>
                 </article>
             </Container>
         </>

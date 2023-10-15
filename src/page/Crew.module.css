@@ -6,9 +6,9 @@ CSS from desktop
 .crew_container {
     display: grid;
     grid-template-columns: 55% 75%;
-    grid-template-rows: 25% 5% 12% 25% 5%;
+    grid-template-rows: 25% 5% 12% 30% 10%;
     width: 85%;
-    height: 75%;
+    height: 70%;
     position: absolute;
     bottom: 0vh;
     left: 150px;
@@ -87,20 +87,23 @@ CSS from desktop
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    gap: 40px;
 }
 
 .crew_container nav  li {
     height: 25px;
     width: 25px;
-    padding: 5px;
     cursor: pointer;
-    background-color: white;
+    background-color: rgba(102, 100, 100, 0.286);
     border-radius: 100%;
-    margin: 0 20px;
+}
+
+.crew_container .selected {
+    background-color: rgb(235, 235, 235);
 }
 
 .crew_container nav li:hover {
-    background-color: wheat;
+    background-color: rgba(212, 212, 212, 0.524);
     transform: scale(105%);
     transition: .5s;
 }
@@ -116,6 +119,21 @@ CSS from desktop
         justify-content: right;
     }
 
+}
+
+@media (min-width: 1024px) {
+    .crew_container h1 {
+        font-size: 38px;
+    }
+
+    .crew_container h3 {
+        font-size: 20px;
+    } 
+
+    .crew_container p {
+        line-height: 28px;
+        font-size: 16px;
+    }    
 }
 
 /*

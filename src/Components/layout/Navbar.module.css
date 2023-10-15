@@ -17,8 +17,8 @@
     position: absolute;
     left: 120px;
     top: 68px;
-    border: 4px solid rgba(22, 22, 22, 0.165);
-    width: 60vw;
+    border: 1px solid rgba(188, 187, 187, 0.142);
+    width: 50vw;
 }
 
 .Navbar_container li {
@@ -43,8 +43,14 @@
 
 .Navbar_container a:hover {
     padding-bottom: 25px;
-    border-bottom: 5px solid #fff;
-    color: #fff;
+    border-bottom: 5px solid #ffffffe0;
+    color: #ffffffd7;
+}
+
+.Navbar_container .selected{
+    padding-bottom: 25px;
+    border-bottom: 5px solid #ffffff;
+    color: #ffffff;
 }
 
 @media (max-width: 1024px){
@@ -62,46 +68,52 @@
 }
 
 @media (max-width: 668px) {
-    .Navbar_container {
+    .Navbar_container{
         display: none;
     }
-
-    .Navbar_container.menu_Open{
+    .Navbar_container.on{
+        z-index: 2;
         padding: 0;
         height: 100vh;
-        width: 100%;
+        width: 75%;
         display: flex;
         flex-direction: column;
         background: #d0d6f900;
         backdrop-filter: blur(0px);
         position: fixed;
         top: 25%;
-        left: 10%;
+        right: 0%;
     }
 
-    .Navbar_container.menu_Open  li {
+    .Navbar_container.on li {
         display: flex;
         align-items: center;
         padding: 0;
         width: 90%;
     }
 
-    .Navbar_container.menu_Open li:hover {
-        border-right: 10px solid #fff;
-        color: #fff;
-    }
-
-    .Navbar_container.menu_Open span {
+    .Navbar_container.on span {
         display: inline;
     }
 
-    .Navbar_container.menu_Open a {
+    .Navbar_container.on a {
+        width: 100%;
         padding: 10px 0px;
         gap: 40px;
     }
 
-    .Navbar_container.menu_Open a:hover {
+    .Navbar_container.on a:hover {
+        padding-bottom: 10px;
         border-bottom: none;
+        border-right: 20px solid #c8c8c8;
+        color: #aeabab;
+    }
+
+    .Navbar_container.on .selected {
+        padding-bottom: 10px;
+        border-bottom: none;
+        border-right: 20px solid #ffffff;
+        color: #ffffff;
     }
 }
 
@@ -110,7 +122,7 @@
         top: 15%;
     }
 
-    .Navbar_container.menu_Open  li {
+    .Navbar_container.menu_Open li {
         font-size: 10px;
     }
 
