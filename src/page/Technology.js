@@ -19,7 +19,7 @@ const Technology=()=>{
     }, [])
 
     if (index.images !== undefined){
-        if (window.innerWidth > window.innerHeight) {
+        if (window.innerWidth > 925) {
             var img = index.images.portrait
         } else {
             var img = index.images.landscape}
@@ -34,7 +34,6 @@ const Technology=()=>{
             
         })
     })
-    console.log(style.selected);
 
     return (
         <div>

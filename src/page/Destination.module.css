@@ -10,7 +10,7 @@ CSS from desktop
     bottom: 0vh;
     left: 150px;
     grid-template-columns: 60% 20% 20%;
-    grid-template-rows: 10% 17% 25% 25% 12%;
+    grid-template-rows: 10% 15% 30% 30% ;
 }
 
 .destination_container h2 {
@@ -103,8 +103,8 @@ CSS from desktop
     font-weight: 400;
     text-align: justify;
     color: #6b6e7d;
-    padding-bottom: 20px;
-    border-bottom: 5px solid #0b0d17;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #1e1e1e;
 }
 
 .destination_container .dado {
@@ -112,9 +112,11 @@ CSS from desktop
     flex-direction: column;
     justify-content: left;
     grid-row-start: 5;
+    grid-row-end: 6;
     grid-column-start: 2;
     grid-column-end: 2;
     text-align: left;
+    gap: 5px;
 }
 
 .destination_container h3 {
@@ -131,7 +133,9 @@ CSS from desktop
     flex-direction: column;
     text-align: right;
     grid-row-start: 5;
+    grid-row-end: 6;
     grid-column-start: 3;
+    gap: 5px;
 }
 
 .destination_container div span {
@@ -142,203 +146,219 @@ CSS from desktop
     text-transform: uppercase;
 }
 
-@media (min-width: 900px) and (max-width: 1124px) and (max-height: 824px)  {
-    .destination_container img  {
-        padding-left: 0;
-    }
-    
-    .destination_container .dado {
-        gap: 35%;
-    }
-    
-    .destination_container .infor {
-        gap: 20%;
-    }
-}
-
-@media (max-width: 1068px) and (max-height: 900px) {
-    .destination_container {  
-        left: 50px;
-        grid-template-columns: 60% 30% 24%;
-    }
-
-    .destination_container img {
-        margin-left: 0;
-        margin-right: 50px;
-    }
-}
-
-/*
-CSS from tablet
-*/
-
-@media (max-width: 1024px) and (min-height: 900px) {
+@media (max-width: 1068px) and (min-width: 958px) and (min-height: 1358px) {
     .destination_container {
         position: relative;
-        left: 0;
+        padding-top: 150px;
         display: flex;
-        flex-direction: column;
+        flex-direction:  column;
         align-items: center;
-        justify-content: center;
         width: 100%;
-        margin: 0;
-        padding: 0;
+        left: auto;
+    }
+
+    .destination_container h2 span,
+    .destination_container h2 {
+        letter-spacing: 2.7px;
+        font-size: 22px;
     }
 
     .destination_container h2 {
         width: 100%;
-        margin-left: 85px;
         text-align: left;
-    }
-
-    .destination_container img {
-        padding: 0;
-        margin: 50px 0;
+        margin-bottom: 20px;
+        padding-left: 50px;
     }
 
     .destination_container nav {
-        width: min-content;
+        margin: 20px 0;
+        width: auto;
     }
 
-    .destination_container h1 {
-        margin: 10px 0;
-    }
-    .destination_container p {
-        padding: 10px 0 50px;
-        width: 80%;
+    .destination_container img {
+        width: 400px;
+        height: 400px;
     }
 
     .destination_container .dado {
-        gap: 80px;
+        width: 50%;
+        text-align: left;
     }
 
     .destination_container .infor {
-        gap: 50px;
+        margin-top: -55px;
+        width: 50%;
+        text-align: right;
+    }
+    
+}
+
+@media (max-width: 1068px) {
+    .destination_container {
+        width: 90%;
+        left: 50px;
+        grid-template-columns: 50% 25% 25%;
+    }
+
+    .destination_container img {
+        margin-left: 10px;
     }
 }
 
-@media (min-width: 768px) and (max-width: 850px) and (max-height: 1124px) {
+@media (max-width: 924px) {
     .destination_container {
         position: relative;
-        top: auto;
+        padding-top: 150px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .destination_container img {
-        margin: 30px 0;
-    }
-} 
-
-/*
-CSS from Mobile
-*/
-
-@media (max-width: 768px) {
-    .destination_container {
-        position: relative;
-        left: 0;
-        display: flex;
-        flex-direction: column;
+        flex-direction:  column;
         align-items: center;
         width: 100%;
-        margin: 0;
-        padding: 0;
+        left: auto;
+    }
+
+    .destination_container h2 span,
+    .destination_container h2 {
+        letter-spacing: 2.7px;
+        font-size: 22px;
+    }
+
+    .destination_container h2 {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+        padding-left: 50px;
+    }
+
+    .destination_container nav {
+        margin: 20px 0;
+        width: auto;
     }
 
     .destination_container img {
-        width: 300px;
-        height: 300px;
-        margin: 20px 0;
+        width: 400px;
+        height: 400px;
+    }
+
+    .destination_container .dado {
+        width: 50%;
+        text-align: left;
+    }
+
+    .destination_container .infor {
+        margin-top: -55px;
+        width: 50%;
+        text-align: right;
+    }
+}
+
+
+@media (max-width: 724px) {
+    .destination_container {
+        position: relative;
+        padding-top: 120px;
+        display: flex;
+        flex-direction:  column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .destination_container h2 span,
+    .destination_container h2 {
+        letter-spacing: 2.7px;
+        font-size: 22px;
+    }
+
+    .destination_container h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
         padding-left: 0;
     }
 
+    .destination_container nav {
+        margin: 20px 0;
+        width: auto;
+    }
+
+    .destination_container img {
+        width: 260px;
+        height: 250px;
+    }
+
+    .destination_container p {
+        max-width: none;
+        width: 95%;
+    }
+
+    .destination_container .dado {
+        width: 100%;
+        text-align: center;
+    }
+
+    .destination_container .infor {
+        margin-top: auto;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 424px) {
+    .destination_container h2 span,
+    .destination_container h2 {
+        letter-spacing: 2.7px;
+        font-size: 20px;
+    }
+
     .destination_container h1 {
-        font-size: 6em;
+        font-size: 90px;
     }
 
     .destination_container nav {
         gap: 20px;
-        padding-right: 0;
-        margin-right: 0;
-        width: min-content;
+    }
+
+    .destination_container img {
+        width: 200px;
+        height: 200px;
     }
 
     .destination_container p {
-        width: 90%;
-        text-align: center;
+        font-size: 16px;
     }
-
-    .destination_container .dado {
-        gap: 100px;
-    }
-    
-    .destination_container .infor {
-        gap: 60px;
-    }
-
 }
 
-@media (max-width: 468px) {
-    .destination_container {
-        padding-top: 80px;
-    }
-
+@media (max-width: 424px) {
+    .destination_container h2 span,
     .destination_container h2 {
         font-size: 18px;
     }
 
-    .destination_container img {
-        width: 280px;
-        height: 280px;
-    }
-
-    .destination_container nav {
-        gap: 20px;
-    }
-
     .destination_container h1 {
-        font-size: 5em;
-    }
-
-    .destination_container .dado {
-        margin-top: 20px;
-        display: grid;
-        gap: 50px;
-    }
-    
-    .destination_container .infor {
-        gap: 40px;
-        display:  flex;
-        flex-direction: column;
-        margin-top: -70px;
-    }
-}
-
-@media (max-width: 300px) {
-    .destination_container {
-        padding-top: 40px;
-    }
-
-    .destination_container h2 span {
-        font-size: 12px;
-        margin-right: 4px;
-    }
-
-    .destination_container h2 {
-        letter-spacing: 2px;
-        font-size: 12px;
-        margin-top: 0px;
-    }
-
-    .destination_container img {
-        width: 150px;
-        height: 150px;
+        font-size: 70px;
     }
 
     .destination_container nav {
         gap: 10px;
+    }
+
+    .destination_container nav li {
+        font-size: 14px;
+    }
+
+    .destination_container img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .destination_container p {
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 350px) {
+    .destination_container h2 span,
+    .destination_container h2 {
+        font-size: 16px;
     }
 
     .destination_container h1 {
@@ -346,27 +366,6 @@ CSS from Mobile
     }
 
     .destination_container nav li {
-        font-size: 14px;
-        letter-spacing: 2px;
-    }
-
-    .destination_container p {
-        line-height: normal;
-        font-size: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 0;
-    }
-} 
-
-@media (min-height: 883px) and (max-width: 1024px) {
-    .destination_container {
-        height: 100vh;
+        font-size: 12px;
     }
 }
-
-@media (max-height: 883px) and (max-width:768px) {
-    .destination_container {
-        height: 100%;
-    }
-
-} 

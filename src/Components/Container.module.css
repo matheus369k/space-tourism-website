@@ -1,80 +1,39 @@
 .container {
-    gap: 20px;
+    margin-top: 0;
+    height: 100vh;
 }
 
 .container .img {
-    z-index: 1;
+    position: absolute;
+    left: 50px;
+    top: 40px;
     width: 40px;
     height: 40px;
-    position: absolute;
-    top: 50px;
-    left: 50px;
-}
-
-.container .icon {
-    width: 35px;
-    height: 30px;
-    position: absolute;
-    z-index: 1;
-    top: 50px;
-    right: 50px;
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.container .menu {
-    background: rgba(60, 60, 60, 0.108);
-    width: 75vw;
-    height: 100vh;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1;
-    backdrop-filter: blur(30px);
 }
 
 .container .img:hover {
     transition: .5s;
     transform: scale(1.1);
 }
-
-.container.home,
-.container.crew,
-.container.technology,
+   
+.container.home {
+    background: url(../img/home/background-home-desktop.jpg) center center no-repeat fixed;
+    background-size: cover;
+}
 .container.destination {
-    background: center center no-repeat fixed;
+    background: url(../img/destination/background-destination-desktop.jpg) center center no-repeat fixed;
+    background-size: cover;
+}
+.container.crew {
+    background: url(../img/crew/background-crew-desktop.jpg) center center no-repeat fixed;
+    background-size: cover;
+}
+.container.technology {
+    background: url(../img/technology/background-technology-desktop.jpg) center center no-repeat fixed;
     background-size: cover;
 }
 
-@media (min-width: 1024px ) {
-    .container.home,
-    .container.crew,
-    .container.technology,
-    .container.destination {
-        height: 100vh;
-    }
-    
-    .container.home {
-        background-image: url(../img/home/background-home-desktop.jpg);
-    }
-    .container.destination {
-        background-image: url(../img/destination/background-destination-desktop.jpg);
-    }
-    .container.crew {
-        background-image: url(../img/crew/background-crew-desktop.jpg);
-    }
-    .container.technology {
-        background-image: url(../img/technology/background-technology-desktop.jpg);
-    }
-}
-
-@media (min-height: 924px ) and (max-width: 1024px ) {
-    .container.home,
-    .container.crew,
-    .container.technology,
-    .container.destination {
-        height: 100vh;
-    }
-
+@media (max-width: 1024px ) {
     .container.home {
         background-image: url(../img/home/background-home-tablet.jpg);
     }
@@ -104,35 +63,29 @@
     }
 }
 
-@media (min-width: 667px ) {
-    .container .icon {
-        display: none;
+@media (max-height:924px) and (max-width: 925px) {
+    .container{
+        overflow-x: hidden;
+        height: 100%;
     }
 }
 
-@media (max-width: 668px)  {
-    .container .icon {
-        right: 20px;
-        top: 20px;
-    }
-
+@media (max-width: 524px)  {
     .container .img {
-        left: 20px;
-        top: 20px;
+        left: 30px;
+        top: 30px;
+        width: 35px;
+        height: 35px;
     }
 }
 
-@media (max-height: 424px)  {
-    .container .icon {
+@media (max-width: 424px)  {
+    .container .img {
         width: 25px;
-        height: 20px;
-    }
-
-    .container .img {
-        width: 20px;
-        height: 20px;
+        height: 25px;
     }
 }
+
 
 
 

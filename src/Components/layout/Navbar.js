@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 
 import style from "./Navbar.module.css"
-import { useEffect } from "react"
-import Container from "../Container"
+import { useEffect, useState } from "react"
 
 const Navbar=(props)=>{
+
+    const [icon, setIcon] = useState(false)
     
     const AddClass=()=>{
         document.querySelectorAll(".link").forEach((select) => {
@@ -15,6 +16,16 @@ const Navbar=(props)=>{
                 select.classList.add(style.selected)
             })
         })
+    }
+
+    const handleMenu=()=>{
+        setIcon(!icon)
+        const current = document.querySelector(".Navbar_menu__gYRhG")
+        if (current && window.innerWidth < 668) {
+            current.classList.remove("Navbar_menu__gYRhG")
+        } else {
+            document.getElementById("menu").classList.add(style.menu)
+        }
     }
     
     localStorage.setItem("select", window.location.href)
@@ -32,26 +43,26 @@ const Navbar=(props)=>{
             TagLi[0].classList.add(style.selected)
         }
     }, [])
+
     return ( 
-        <>
-        <Container classCustom="navbar">
+        <div className={`${style[props.classCustom]} ${style.Navbar_container}`}>
             <div className={style.barra}></div>
-            <ul className={`${style[props.classCustom]} ${style.Navbar_container}`}>
+            <ul id="menu">
                 <li>
-                    <Link className="link" onMouseEnter={()=>AddClass()} to="/"><span>00</span>Home</Link>
+                    <Link className="link" onMouseEnter={()=>AddClass()} onClick={()=>handleMenu()} to="/"><span>00</span>Home</Link>
                 </li>
                 <li>
-                    <Link className="link" id="destination" onMouseEnter={()=>AddClass()} to="/destination"><span>01</span>Destination</Link>
+                    <Link className="link" id="destination" onMouseEnter={()=>AddClass()} onClick={()=>handleMenu()} to="/destination"><span>01</span>Destination</Link>
                 </li>
                 <li>
-                    <Link className="link" onMouseEnter={()=>AddClass()} to="/crew"><span>02</span>Crew</Link>
+                    <Link className="link" onMouseEnter={()=>AddClass()} onClick={()=>handleMenu()} to="/crew"><span>02</span>Crew</Link>
                 </li>
                 <li>
-                    <Link className="link" onMouseEnter={()=>AddClass()} to="/technology"><span>03</span>Technology</Link>
+                    <Link className="link" onMouseEnter={()=>AddClass()} onClick={()=>handleMenu()} to="/technology"><span>03</span>Technology</Link>
                 </li>
             </ul>
-        </Container>
-        </>
+            <img className={style.icon} src={`icon-${icon ? "close" : "hamburger"}.svg`} onClick={()=>handleMenu()}/>
+        </div>
     )
 }
 

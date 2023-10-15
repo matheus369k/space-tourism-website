@@ -7,26 +7,17 @@
   text-shadow: 1px 1px rgba(0, 0, 0, 0.334)
 }
 
- *{border: 1px solid red}
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;700;900&family=Bellefair&display=swap');
 
 html,
 body{
-  width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
-  background-color: black;
-}
-
-@media (min-height: 858px) {
-  html,
-  body {
-    overflow: hidden;
-  }
+  height: 100vh;
 }
 
 /*
+ *{border: 1px solid red}
 font-family: 'Barlow Condensed', sans-serif;
 font-family: 'Bellefair', serif;
 */
