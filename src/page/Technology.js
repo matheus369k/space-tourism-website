@@ -19,7 +19,7 @@ const Technology=()=>{
     }, [])
 
     if (index.images !== undefined){
-        if (window.innerWidth > 925) {
+        if (window.innerHeight < window.innerWidth && window.innerWidth > 924) {
             var img = index.images.portrait
         } else {
             var img = index.images.landscape}

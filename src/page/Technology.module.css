@@ -116,7 +116,66 @@
     transition: .5;
 }
 
-@media (max-width: 1024px)  {
+@media (max-width: 1068px) and (min-width: 958px) and (min-height: 1358px){
+    .technology_container {
+        padding-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        left: auto;
+        bottom: auto;
+        text-align: center;
+        margin: 0;
+    }
+
+    .technology_container h2 {
+        text-align: left;
+        padding-left: 50px;
+        width: 100%;
+    }
+
+    .technology_container img {
+        width: 100vw;
+        height: auto;
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin: 40px 0;
+    }
+
+    .technology_container p {
+        width: 90%;
+        text-align: center;
+        max-width: none;
+        padding-bottom: 20px;
+    }
+
+    .technology_container h1 {
+        padding-bottom: 20px;
+    }
+
+    .technology_container h3 {
+        padding-top: 20px;
+    }
+
+    .technology_container nav {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .technology_container nav li {
+        width: 45px;
+        height: 45px;
+    }
+
+    .technology_container nav li:hover {
+        transform: scale(1);
+    }
+} 
+
+@media (max-width: 1024px) and (max-height: 993px){
     .technology_container {
         grid-template-columns: 8% 55% 50%;
         left: 50px;
@@ -248,6 +307,10 @@
 } 
 
 @media (max-width: 300px) {
+    .technology_container {
+        padding-top: 80px;
+    }
+
     .technology_container h2 span,
     .technology_container h2 {
         font-size: 14px;
@@ -279,3 +342,16 @@
     }
 }
 
+@media (min-height: 624px) and (max-width: 724px){
+    .technology_container {
+        overflow: hidden;
+        height: 100vh;
+    }
+}
+
+@media (min-height: 924px) and (max-width: 1024px){
+    .crew_container {
+        overflow: hidden;
+        height: 100vh;
+    }
+}

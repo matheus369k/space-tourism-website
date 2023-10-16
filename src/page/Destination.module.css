@@ -296,13 +296,18 @@ CSS from desktop
     }
 
     .destination_container .infor {
-        margin-top: auto;
+        margin-top: 0px;
+        padding-bottom: 10px;
         width: 100%;
         text-align: center;
     }
 }
 
 @media (max-width: 424px) {
+    .destination_container {
+        padding-top: 64px;
+    }
+
     .destination_container h2 span,
     .destination_container h2 {
         letter-spacing: 2.7px;
@@ -314,7 +319,7 @@ CSS from desktop
     }
 
     .destination_container nav {
-        gap: 20px;
+        gap: 5px;
     }
 
     .destination_container img {
@@ -356,6 +361,10 @@ CSS from desktop
 }
 
 @media (max-width: 350px) {
+    .technology_container {
+        padding-top: 80px;
+    }
+
     .destination_container h2 span,
     .destination_container h2 {
         font-size: 16px;
@@ -367,5 +376,33 @@ CSS from desktop
 
     .destination_container nav li {
         font-size: 12px;
+    }
+}
+
+@media (max-width: 300px) {
+    .destination_container {
+        padding-top: 50px;
+    }
+}
+
+@media (min-height: 724px) and (max-width: 724px){
+    .destination_container {
+        overflow: hidden;
+        height: 100vh;
+    }
+    
+    .destination_container .infor {
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-height: 924px) and (max-width: 1024px){
+    .crew_container {
+        overflow: hidden;
+        height: 100vh;
+    }
+    
+    .destination_container .infor {
+        padding-bottom: 10px;
     }
 }

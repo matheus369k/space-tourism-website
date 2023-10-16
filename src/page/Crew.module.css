@@ -178,12 +178,12 @@
     }
 }
 
-@media (max-width: 903px) {
+@media (max-width: 924px) {
     .crew_container {
         width: 100%;
-        padding-top: 200px;
+        padding-top: 150px;
         grid-template-columns: 100%;
-        grid-template-rows: 10% 4% 15% 20% 8% 70%;
+        grid-template-rows: 80px 20px 80px 150px 20px 520px;
         position: relative;
         left: auto;
         bottom: auto;
@@ -244,7 +244,7 @@
 
 @media (max-width: 724px) {
     .crew_container {
-        padding-top: 100px;
+        padding-top: 150px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -282,7 +282,6 @@
 }
 
 @media (max-width: 568px) {
-
     .crew_container h2 span,
     .crew_container h2 {
        font-size: 18px;
@@ -290,14 +289,16 @@
 
     .crew_container h3 {
         font-size: 20px;
+        margin-top: 20px;
     }
 
     .crew_container h1 {
         font-size: 28px;
-        margin: 1px 0 20px;
+        margin: 2px 0 15px;
     }
 
     .crew_container p {
+        padding-bottom: 15px;
         width: 95%;
     }
 
@@ -348,6 +349,10 @@
 
 
 @media (max-width: 300px) {
+    .technology_container {
+        padding-top: 50px;
+    }
+
     .crew_container h2 span,
     .crew_container h2 {
         letter-spacing: 1.7px;
@@ -378,5 +383,19 @@
 
     .crew_container img {
         margin: 10px 0;
+    }
+}
+
+@media (min-height: 624px) and (max-width: 724px){
+    .crew_container {
+        overflow: hidden;
+        height: 100vh;
+    }
+}
+
+@media (min-height: 924px) and (max-width: 1024px){
+    .crew_container {
+        overflow: hidden;
+        height: 100vh;
     }
 }
