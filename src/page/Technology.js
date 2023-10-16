@@ -1,19 +1,20 @@
+import axios from "axios"
 import Container from "../Components/Container"
 import Loading from "../Components/Loading"
 import style from "./Technology.module.css"
 import { useEffect, useState } from "react"
 
 const Technology=()=>{
-    const API = "http://localhost:5000/technology"   
+    const API = "https://matheus369k.github.io/Data/SpaceTourism.json"   
     const [datas, setDatas] = useState([])
     const [index, setIndex] = useState([])
 
     useEffect(() => {
-        fetch(API)
-            .then((resp) => resp.json())
-            .then((data) => {
-                setDatas(data)
-                setIndex(data[0])
+        axios.get(API)
+            .then((resp) => {
+                //console.log(resp.data.technology);
+                setDatas(resp.data.technology)
+                setIndex(resp.data.technology[0])
             })
             .catch((err) => console.log(err))
     }, [])
