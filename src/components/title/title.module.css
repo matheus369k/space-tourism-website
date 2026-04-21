@@ -1,0 +1,43 @@
+.title,
+.title_counter {
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.75rem;
+}
+
+.title {
+  letter-spacing: 4.7px;
+  font-weight: 400;
+  color: #fff;
+  padding-bottom: 4rem;
+  align-self: flex-start;
+}
+
+.title_counter {
+  font-weight: 700;
+  color: #6b6e7d;
+  padding-right: 1.5rem;
+}
+
+@media (width <= 1024px) {
+  .title,
+  .title_counter {
+    font-size: 1.25rem;
+  }
+
+  .title_counter {
+    padding-right: 1rem;
+  }
+}
+
+@media (width <= 768px) {
+  .title,
+  .title_counter {
+    font-size: 1rem;
+  }
+
+  .title {
+    align-self: center;
+    padding-bottom: 2rem;
+  }
+}

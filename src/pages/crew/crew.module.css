@@ -1,0 +1,140 @@
+.crew_container {
+  display: grid;
+  grid-template-columns: 40rem auto;
+  grid-template-rows: repeat(3, auto);
+  height: var(--max-main-h);
+  max-width: 70.25rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.crew_image_container {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  margin-left: auto;
+  border-bottom: 1px solid #383b4b;
+
+  & img {
+    max-height: var(--max-main-h);
+    object-fit: fill;
+    width: auto;
+    height: 100%;
+  }
+}
+
+.crew_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  grid-row: 2;
+}
+
+.crew_header_info {
+  font-family: Bellefair;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-weight: 400;
+  color: white;
+
+  & span {
+    font-size: 2rem;
+    opacity: 0.5;
+  }
+
+  & h1 {
+    font-size: 3.5rem;
+    padding-top: 1rem;
+  }
+}
+
+.crew_description_info {
+  font-family: Barlow;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  letter-spacing: 0px;
+  color: #d0d6f9;
+  padding-top: 0.75rem;
+}
+
+.crew_nav_circle {
+  display: flex;
+  align-self: flex-end;
+  height: 4rem;
+  grid-row: 3;
+  gap: 1.5rem;
+
+  & div {
+    width: 15px;
+    height: 15px;
+    opacity: 0.15;
+    border-radius: 50%;
+    background-color: white;
+    transition: opacity 0.5s linear;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &[data-is-selected='true'] {
+      cursor: default;
+      opacity: 1;
+    }
+  }
+}
+
+@media (width <= 1024px) {
+  .crew_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content) 1fr;
+  }
+
+  .crew_nav_circle {
+    margin-inline: auto;
+    align-items: center;
+  }
+
+  .crew_info {
+    text-align: center;
+    margin-inline: auto;
+
+    & span {
+      font-size: 1.5rem;
+    }
+
+    & h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .crew_description_info {
+    height: 7rem;
+  }
+
+  .crew_image_container {
+    margin-inline: auto;
+    grid-column: 1;
+    grid-row: 4;
+    align-self: end;
+  }
+}
+
+@media (width <= 768px) {
+  .crew_container {
+    grid-template-rows: min-content 1fr repeat(2, min-content);
+  }
+
+  .crew_info {
+    grid-row: 4;
+  }
+
+  .crew_image_container {
+    grid-row: 2;
+
+    & img {
+      height: 100dvw;
+      width: 100%;
+    }
+  }
+}

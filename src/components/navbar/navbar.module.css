@@ -1,0 +1,115 @@
+.navbar_container {
+  --navbar-bg: #ffffff0a;
+  --navbar-p-block: 2.25rem;
+
+  position: relative;
+  padding-block: var(--navbar-p-block);
+  font-family: 'Barlow Condensed', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--navbar-w);
+  width: 100%;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    background-color: var(--navbar-bg);
+    backdrop-filter: blur(80px);
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.navbar_container.desktop {
+  padding-right: var(--header-pl);
+
+  & .navbar_list {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    width: fit-content;
+    z-index: 1;
+  }
+}
+
+.navbar_container.mobile {
+  padding-block: 0;
+  padding-inline: var(--header-pl);
+  background-color: transparent;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: auto;
+  z-index: 3;
+
+  &[data-is-open='false']::before,
+  &[data-is-open='false'] .navbar_list {
+    display: none;
+  }
+
+  &[data-is-open='true']::before,
+  &[data-is-open='true'] .navbar_list {
+    display: flex;
+    z-index: 2;
+  }
+
+  &[data-is-open='true'] {
+    position: absolute;
+    min-height: 100dvh;
+    right: -1px;
+    top: 0;
+
+    & .navbar_list {
+      padding-top: 7.5rem;
+    }
+  }
+
+  &[data-is-open='true']::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100dvw;
+    height: 100dvh;
+  }
+
+  & .menu_icon {
+    position: absolute;
+    right: var(--header-pl);
+    top: calc((var(--header-pl) / 2) - var(--header-pl));
+    z-index: 5;
+  }
+
+  &[data-is-open='true'] .menu_icon {
+    top: calc(var(--header-pl) * 1.25);
+  }
+
+  & .navbar_list {
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.navbar_list {
+  font-weight: 800;
+  color: #fff;
+}
+
+@media (width <= 1024px) {
+  .navbar_container.desktop {
+    padding-right: 0;
+
+    & .navbar_list {
+      gap: 2.5rem;
+    }
+  }
+}
+
+@media (width <= 768px) {
+  .navbar_list {
+    display: flex;
+  }
+}
